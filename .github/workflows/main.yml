@@ -1,3 +1,14 @@
-- name: Download JAR
-  run: |
-    pwd
+name: Show PWD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  show-pwd:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print current working directory
+        run: pwd
